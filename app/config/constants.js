@@ -1,0 +1,18 @@
+export default {
+  OVERLAY: {
+    SHOW: 'OVERLAY_SHOW',
+    HIDE: 'OVERLAY_HIDE'
+  },
+  MENU: {
+    CHANGE_SECTION: 'MENU_CHANGE_SECTION',
+    CHANGE_TOPIC: 'MENU_CHANGE_TOPIC'
+  },
+  TOME: {
+    CHAPTER: {
+      SELECT: 'TOME_CHAPTER_SELECT'
+    },
+    TOPIC: {
+      SELECT: 'TOME_TOPIC_SELECT'
+    }
+  },
+};

@@ -1,0 +1,77 @@
+/**
+ * RESET
+ *
+ * Reset the margins and paddings, etc of all raw html elements
+ * Make block elements actually display block
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+  border: 0;
+  font-size: 100%;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+*:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+//
+// VARIABLES and CONSTANTS
+//
+%clearfix {
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+// Base Colors
+$base_light : #F4F0E8;
+$base_dark: #7C705F;
+$base_medium: #99896F;
+
+$base_1: #F4F0E8;
+$base_2: #E4DED3;
+$base_3: #DDD4C5;
+$base_4: #C9C3B7;
+$base_6: #99896F;
+$base_8: #7C705F;
+
+// Brand Colors
+$brand_blue: rgb(68, 85, 166);
+$brand_green: rgb(139, 197, 98);
+$brand_teal: rgb(101, 195, 207);
+$brand_orange: rgb(233, 113, 50);
+$brand_yellow: rgb(227, 157, 42);
+$brand_red: rgb(167, 62, 79);
+$brand_pink: rgb(196, 118, 175);
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}

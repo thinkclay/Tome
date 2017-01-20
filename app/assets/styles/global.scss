@@ -1,0 +1,251 @@
+@import "~font-awesome/css/font-awesome.css";
+@import 'fonts';
+@import 'constants';
+@import 'navigation';
+@import 'overlay';
+@import 'entry';
+
+body, html {
+  background: $base_2;
+  color: $base_8;
+  font: 300 10px/1 'Roboto', sans-serif;
+  font-smoothing: antialiased;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: 500 10px/2.5rem 'Roboto Slab', serif;
+  padding: 1rem 0 .5rem;
+}
+
+h1 {
+  border-bottom: 1px solid $base_3;
+  color: $base_8;
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font: 100 3rem/4.2rem 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 2rem 0 1rem;
+  text-shadow: 0 1px 0 #fff;
+}
+
+h3 {
+  font: 300 2.5rem/3.8rem 'Roboto Slab', serif;
+}
+
+a {
+  color: $brand_pink;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($brand_pink, 15%);
+  }
+}
+
+p {
+  font: 300 1.3rem/2.2rem 'Roboto', sans-serif;
+  padding: 1.5rem 0;
+}
+
+//
+// Forms
+//
+.button {
+  &.cta {
+    background: $base_1;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+    color: $base_6;
+    cursor: pointer;
+    font: 400 1.5rem/1 'Roboto Condensed', sans-serif;
+    letter-spacing: .02rem;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    padding: 1.4rem 2.5rem;
+    text-transform: uppercase;
+    transition: all .2s;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 15px 0 rgba(255, 255, 255, 0.5);
+      color: $base_8;
+    }
+
+    &:active {
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1), inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &.orange {
+      background-image: linear-gradient(-180deg, rgba(228,136,74,0.99) 0%, #D1671C 100%);
+      border: 1px solid rgba(255,255,255,0.50);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15);
+      color: #fff;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 15px 0 rgba(255, 255, 255, 0.2);
+      }
+
+      &:active {
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1), inset 0 0 3px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    i {
+      padding-right: 1rem;
+    }
+  }
+}
+
+#root, .app, main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex: 2;
+  position: relative;
+  z-index: 200;
+
+  .navigation {
+    display: flex;
+    flex: 0 0 32rem;
+    flex-direction: column;
+    position: relative;
+    z-index: 210;
+
+    header {
+      display: block;
+      padding: 2.5rem;
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .button {
+        display: block;
+      }
+    }
+
+    .articles.list {
+      display: flex;
+      flex-direction: column;
+      flex: 4;
+
+      &:before {
+        background-image: linear-gradient(to bottom, $base_2 0%, rgba(255, 255, 255, 0) 100%);
+        content: ' ';
+        display: block;
+        height: 2rem;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 220;
+      }
+
+      &:after {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, $base_2 100%);
+        bottom: 0;
+        content: ' ';
+        display: block;
+        height: 2rem;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 220;
+      }
+
+      .chapters {
+        flex: 1;
+        padding: 2rem 0;
+        overflow-y: scroll;
+        z-index: 211;
+      }
+
+      dt {
+        background: lighten($base_2, 2%);
+        border-bottom: 1px solid $base_4;
+        font: 300 1.4rem/1 'Roboto Slab', serif;
+        padding: 1.5rem;
+      }
+
+      dd {
+        button {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid $base_4;
+          color: $base_8;
+          cursor: pointer;
+          display: block;
+          line-height: 1.5rem;
+          padding: 1.5rem;
+          text-align: left;
+          transition: background .3s;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.05);
+          }
+
+          &.selected {
+            background: transparentize($brand_teal, .8);
+          }
+
+          strong {
+            display: block;
+            font: 600 1.3rem/1.6rem 'Roboto Condensed', sans-serif;
+            letter-spacing: .03rem;
+            padding-bottom: .5rem;
+          }
+
+          span {
+            font: 500 1.1rem/1.5rem 'Roboto', sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  .guide {
+    flex: 4;
+    position: relative;
+    z-index: 220;
+  }
+
+  .toolbar {
+    border: none;
+    flex: 0 0 2rem;
+    margin: 0;
+    min-height: 3rem;
+    padding: 1.9rem 5%;
+
+    button {
+      padding: 0;
+    }
+  }
+
+  .public-DraftEditor-content {
+    padding: 0 0 3rem;
+  }
+
+  .inner {
+    flex: 1;
+    font: 300 1.3rem/2rem 'Roboto', sans-serif;
+    margin: 0;
+    padding: 2.5rem;
+    overflow-y: scroll;
+  }
+}
