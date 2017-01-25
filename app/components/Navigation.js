@@ -2,43 +2,43 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import shortid from 'shortid';
-import * as tomeActions from '../actions/tomeActions';
-import * as tomeModel from '../models/tomeModel';
+import * as menuActions from '../actions/menuActions';
 
 class Navigation extends Component {
-  componentDidMount() {
-    this.props.topicSelect(0, 0);
-  }
-
   props: {
-    topicSelect: (index: number, chapter: number) => void,
-    tome: tomeModel.schema
+    changeChapter: () => void,
+    changeSection: () => void
   }
-
-  renderChapters = (chapters) => chapters.map((chapter, index) => (
-    <dl key={shortid.generate()}>
-      <dt>{chapter.title}</dt>
-      <dd>
-        {this.renderTopics(chapter.topics, index)}
-      </dd>
-    </dl>
-  ));
-
-  renderTopics = (topics, chapter) => topics.map((topic, index) => (
-    <button key={shortid.generate()} className={topic.selected ? 'selected' : ''} onClick={() => this.props.topicSelect(index, chapter)}>
-      <strong>{topic.title}</strong>
-      <span>{topic.description}</span>
-    </button>
-  ));
 
   render() {
+    const { changeChapter, changeSection } = this.props;
+
     return (
-      <nav className="articles list">
-        <div className="chapters">
-          {this.props.tome ? this.renderChapters(this.props.tome.all) : null}
-        </div>
-      </nav>
+      <header className="title-bar">
+        <span className="site actions" />
+        <nav className="content actions">
+          <div className="section">
+            <button className="zone" onClick={changeChapter}>
+              <div className="current">
+                <i className="fa fa-angle-down" />
+                <span className="label">Chapter:</span>
+                <strong>Building a RESTful API</strong>
+              </div>
+            </button>
+          </div>
+
+          <div className="topic">
+            <button className="zone" onClick={changeSection}>
+              <div className="current">
+                <i className="fa fa-angle-down" />
+                <span className="label">Section:</span>
+                <strong>Building a RESTful API</strong>
+              </div>
+            </button>
+          </div>
+        </nav>
+        <span className="guide actions" />
+      </header>
     );
   }
 }
@@ -46,10 +46,10 @@ class Navigation extends Component {
 
 function mapStateToProps(state) {
   return {
-    tome: state.tome
+    overlay: state.overlay
   };
 }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators(tomeActions, dispatch);
+const mapDispatchToProps = (dispatch) => bindActionCreators(menuActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

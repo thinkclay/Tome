@@ -41,7 +41,7 @@ const select = (oldState, chapterIndex: number, topicIndex: number) => {
 
 const tome = (state: tomeModel.schema = defaultState, action: tomeModel.action) => {
   switch (action.type) {
-    case C.TOME.TOPIC.SELECT :
+    case C.TOME.SECTION.SELECT :
       return select(state, action.chapter, action.topic);
 
     default :

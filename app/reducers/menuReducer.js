@@ -17,12 +17,12 @@ type actionType = {
 
 export default function menu(state: stateType = defaultState, action: actionType) {
   switch (action.type) {
-    case C.MENU.CHANGE_SECTION:
+    case C.MENU.CHANGE_CHAPTER:
       return {
         ...state,
         section: 'something'
       };
-    case C.MENU.CHANGE_TOPIC:
+    case C.MENU.CHANGE_SECTION:
       return {
         ...state,
         topic: 'interesting'

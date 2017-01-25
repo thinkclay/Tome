@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import TopBar from '../components/TopBar';
+import Navigation from '../components/Navigation';
 import Overlay from '../components/Overlay';
 import * as overlayModel from '../models/overlayModel';
 
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="app">
         <main className={overlay.visible ? 'blur' : null}>
-          <TopBar />
+          <Navigation />
           {children}
         </main>
 

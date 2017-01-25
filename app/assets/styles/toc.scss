@@ -1,0 +1,101 @@
+.page .toc {
+  display: flex;
+  flex: 0 0 32rem;
+  flex-direction: column;
+  position: relative;
+  z-index: 210;
+
+  header {
+    display: block;
+    padding: 2.5rem;
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .button {
+      display: block;
+    }
+  }
+
+  .articles.list {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+
+    &:before {
+      background-image: linear-gradient(to bottom, $base_2 0%, rgba(255, 255, 255, 0) 100%);
+      content: ' ';
+      display: block;
+      height: 2rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 220;
+    }
+
+    &:after {
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, $base_2 100%);
+      bottom: 0;
+      content: ' ';
+      display: block;
+      height: 2rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      z-index: 220;
+    }
+
+    .chapters {
+      flex: 1;
+      padding: 2rem 0;
+      overflow-y: scroll;
+      z-index: 211;
+    }
+
+    dt {
+      background: lighten($base_2, 2%);
+      border-bottom: 1px solid $base_4;
+      font: 300 1.4rem/1 'Roboto Slab', serif;
+      padding: 1.5rem;
+    }
+
+    dd {
+      button {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $base_4;
+        color: $base_8;
+        cursor: pointer;
+        display: block;
+        line-height: 1.5rem;
+        padding: 1.5rem;
+        text-align: left;
+        transition: background .3s;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.05);
+        }
+
+        &.selected {
+          background: transparentize($brand_teal, .8);
+        }
+
+        strong {
+          display: block;
+          font: 600 1.3rem/1.6rem 'Roboto Condensed', sans-serif;
+          letter-spacing: .03rem;
+          padding-bottom: .5rem;
+        }
+
+        span {
+          font: 500 1.1rem/1.5rem 'Roboto', sans-serif;
+        }
+      }
+    }
+  }
+}

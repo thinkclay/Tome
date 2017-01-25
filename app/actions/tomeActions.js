@@ -8,7 +8,7 @@ export const chapterSelect = (index: number) => ({
 });
 
 export const topicSelect = (index: number, chapter: number) => ({
-  type: C.TOME.TOPIC.SELECT,
+  type: C.TOME.SECTION.SELECT,
   chapter,
   topic: index
 });

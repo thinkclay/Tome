@@ -2,8 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as tomeModel from '../models/tomeModel';
-import Navigation from './Navigation';
-import mascot from '../assets/images/Mascot.svg';
+import TableOfContents from './TableOfContents';
 
 class Home extends Component {
   props: {
@@ -15,19 +14,14 @@ class Home extends Component {
 
     return (
       <div className="page">
-        <aside className="navigation">
+        <aside className="toc">
           <header>
-            <img src={mascot} alt="Gopher" />
-            <p>
-              Become a member of <strong>unicorn.tv</strong> and get access
-              to premium tutorials and screencasts like this!
-            </p>
-            <a href="https://unicorn.tv" target="_blank" className="cta orange button" rel="noopener noreferrer">
-              <i className="fa fa-user-o" />
-              Become a Member
-            </a>
+            <button className="cta button" rel="noopener noreferrer">
+              <i className="fa fa-plus" />
+              Add Chapter
+            </button>
           </header>
-          <Navigation />
+          <TableOfContents />
         </aside>
 
         <section className={`${tome.topic.key} content`}>
