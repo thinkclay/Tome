@@ -51,6 +51,8 @@ app.on('ready', async () => {
     titleBarStyle: 'hidden-inset'
   });
 
+  mainWindow.maximize();
+
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
   mainWindow.webContents.on('did-finish-load', () => {

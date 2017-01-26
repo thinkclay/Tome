@@ -65,6 +65,39 @@ section.content {
     }
   }
 
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+      &:nth-child(odd) {
+        td {
+          background: lighten($base_1, 2%);
+        }
+      }
+
+      &:hover {
+        td {
+          background: #fff;
+        }
+      }
+    }
+
+    th, td {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      transition: background-color .2s;
+    }
+
+    th {
+      border-bottom: 1px solid $base_2;
+    }
+  }
+
+  code {
+    color: $brand_pink;
+  }
+
   &.cover {
     text-align: center;
 

@@ -2,6 +2,7 @@ import c0s0 from './00_cover.md';
 import c0s1 from './01_who.md';
 import c0s2 from './02_what.md';
 import c0s3 from './03_prerequisites.md';
+import c1s3 from './13_types.md';
 
 export default [
   {
@@ -51,7 +52,7 @@ export default [
       {
         title: 'Primatives and the like',
         description: 'A simple list of the built-in data types with brief descriptions about each type with examples.',
-        content: c0s3
+        content: c1s3
       },
       {
         title: 'Lexers, tokens, and beards; OH MY!',
