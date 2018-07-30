@@ -66,15 +66,20 @@ h3 {
 }
 
 a {
-  color: $brand_pink;
+  color: darken($brand_teal, 20%);
+  font-weight: 500;
   text-decoration: none;
 
   &:hover {
-    color: darken($brand_pink, 15%);
+    color: darken($brand_teal, 35%);
   }
 }
 
 p {
   font: 300 1.3rem/2.2rem 'Roboto', sans-serif;
   padding: 1.5rem 0;
+}
+
+pre, code {
+  font: 400 1.2rem/1 Hasklig, Monaco, fixed
 }

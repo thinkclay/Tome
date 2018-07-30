@@ -2,7 +2,9 @@
 
 Hi there! I am **Clay Unicorn**, the author and developer of this book, "Unicorns and Gophers." I have been a teacher in some form or another throughout most of my life; a passion that is ever-growing. Sometime in late 2016 I finally decided to plunge full-force into education, and since I could not find the job I wanted, I decided to create it! I hope that you will enjoy learning and reading through this book with me. While it is a personal endeavor for me, I would also gladly appreciate any help, suggestions or feedback based on your experience with this application!
 
-If it is not already clear based on the brand of the book, you have entered into a silly mind. My teaching style is a bit unique, and akin to the appreciation or dismissal of Unicorns themselves, you will form your own opinions about me and this book. Hopefully you will learn many things from this book and enjoy the experience throughout. I have taught over 100 developers over the years, so I am not green when it comes to training young Padawans. You, my padawan, are going to learn some of the greatest tech for modern programming from this book, and there will be no limit to what you can build or achieve on the other side!
+> If it is not already clear based on the brand of the book, I have a silly mind. My teaching style is a bit unique, and akin to the appreciation or dismissal of Unicorns themselves, you will form your own opinions about me and this book.
+
+Hopefully you will learn many things from this book and enjoy the experience throughout. I have taught over 100 developers over the years, so I am not green when it comes to training young Padawans. You, my padawan, are going to learn some of the greatest tech for modern programming from this book, and there will be no limit to what you can build or achieve on the other side!
 
 I'm not great at talking about myself, but there is plenty of information about me on [LinkedIn](linkedin.com/in/thinkclay) and [github](https://github.com/thinkclay). Feel free to connect with me at either of those places, or stalk [my company](http://unicorn.xxx/). The only thing that you really need to know about me at this point is that I know my stuff. I have built web applications for Samsung and Youtube, IoT applications for Gatorade, and dozens of mobile applications for startups. I am fully fluent in at least a dozen programming languages and framework. When I have an opinion it is because I am confident in that opinion.
 
@@ -34,7 +36,7 @@ I admit: I probably reinvented the wheel a little bit, but I am okay with that. 
 
 Where go really shine is web API's, systems and IoT development. The standard library (aka `stdlib`) is incredibly small and provides you with most of the bare-bones functionality that you need to support applications across multiple systems. When it comes to speed, very few languages can outperform go, and the ones that can have a much higher learning curve.
 
-> If I could only use one language from this point on, it would be Go.
+> If I could only use one language for the rest of my life, I would use Go.
 
 I picked up Go and started building my first Go application in a matter of minutes. This is not a reflection on some super power or skills on my part, but rather the simplicity of the language itself. Not only that, but because so much of the type checking and formatting is enforced by the toolchain, I felt confident as a total noob, that I was still writing **good, clean, code**. If you already have a strong background in Computer Science, then you will learn go incredibly fast. Memory management is pretty much done for you, so the only bits you really need to understand there are when to call pointers or pass by value. The lexicon of the language is terse so if you have already worked with C or some derivative, than you will rarely find yourself searching for syntax examples.
 

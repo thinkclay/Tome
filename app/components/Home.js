@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as tomeModel from '../models/tomeModel';
 import TableOfContents from './TableOfContents';
+import MarkdownPreview from './MarkdownPreview';
 import mascot from '../assets/images/Mascot.svg';
 
 class Home extends Component {
@@ -31,34 +32,10 @@ class Home extends Component {
         </aside>
 
         <section className={`${tome.topic.key} content`}>
-          <div className="inner" dangerouslySetInnerHTML={{ __html: tome.topic.content }} />
+          <article>
+            <MarkdownPreview source={tome.topic.content} />
+          </article>
         </section>
-
-        <aside className="guide">
-          <div className="inner">
-            <p>
-              This tutorial is more fun than most. My favorite use for Go is building API’s.
-              It is lightweight, has a robust standard library
-              that does all the work you need it to, and is extremely straightforward.
-              Many times, API’s are more of an anti-pattern and as such,
-              a large framework or pattern focus can get in the way.
-            </p>
-            <p>
-              This tutorial is more fun than most. My favorite use for Go is building API’s.
-              It is lightweight, has a robust standard library
-              that does all the work you need it to, and is extremely straightforward.
-              Many times, API’s are more of an anti-pattern and as such,
-              a large framework or pattern focus can get in the way.
-            </p>
-            <p>
-              This tutorial is more fun than most. My favorite use for Go is building API’s.
-              It is lightweight, has a robust standard library
-              that does all the work you need it to, and is extremely straightforward.
-              Many times, API’s are more of an anti-pattern and as such,
-              a large framework or pattern focus can get in the way.
-            </p>
-          </div>
-        </aside>
       </div>
     );
   }

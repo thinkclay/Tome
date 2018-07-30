@@ -32,7 +32,7 @@ export default validate({
 
       {
         test: /\.md$/,
-        loader: 'html!markdown?gfm=true'
+        loader: 'html'
       },
     ]
   },

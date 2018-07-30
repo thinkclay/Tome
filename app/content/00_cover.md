@@ -1,4 +1,6 @@
-# Unicorns and Gophers
+# |title| Unicorns and Gophers
+
+A whimsical journey into the world of computer science. Learn how programming languages are designed and leveraged to build full-feature applications. In this book, you will build your own basic programming language on top of Go and design your own Command Line Interface for interacting with your program.
 
 ## Written by Clay Unicorn
 *Copyright &copy; 2017 Unicorn LLC*
